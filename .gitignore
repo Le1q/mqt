@@ -1,0 +1,52 @@
+# Compiled Object files
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Qt Creator specific files
+*.pro.user
+*.qmake.stash
+*.qmake.cache
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build/
+out/
+
+# User-specific files
+*.user
+*.user.*
+*.swp
+*.swo
+*.swn
+
+# IDE specific files
+.idea/
+.vscode/
+.vs/

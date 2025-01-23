@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Click Me</string>
+     </property>
+    </widget>
+   </layout>
+  </widget>
+  <menuBar class="QMenuBar" name="menubar"/>
+  <statusBar class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
