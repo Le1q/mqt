@@ -1,19 +1,9 @@
 #include "mainwindow.h"
-#include <QApplication>
-#include <businesslogic.h>
+#include "./ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-{
-    // Setup UI and other initialization code
-    BusinessLogic businessLogic;
-    businessLogic.doSomething();
-
+    : QMainWindow(parent), ui(new Ui::MainWindow) {
+  ui->setupUi(this);
 }
 
-MainWindow::~MainWindow()
-{
-    // Cleanup code if necessary
-}
-
-// Additional methods for handling user interactions and UI updates can be added here.
+MainWindow::~MainWindow() { delete ui; }
