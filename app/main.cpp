@@ -13,11 +13,5 @@ int main(int argc, char *argv[])
     w.setWindowTitle(QString("Peace & Love").arg(result));
     w.show();
 
-    // 发布订阅演示
-    MyPublisher publisher;
-    MySubscriber subscriber;
-    publisher.subscribe(&subscriber);
-    publisher.doSomething();
-
     return a.exec();
 }
