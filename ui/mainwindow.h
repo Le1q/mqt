@@ -12,9 +12,13 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void onNotify(int eventId, void* data) override;
+
+private slots:
+    void onHomeButtonClicked();
+    void onSettingsButtonClicked();
+    void onAboutButtonClicked();
+
 private:
     Ui::MainWindow *ui;
     MyPublisher publisherM;
-private slots:
-    // void on_pushButton_clicked();
 };

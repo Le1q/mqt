@@ -14,69 +14,75 @@
    <string>Dashboard</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="mainLayout">
+   <layout class="QHBoxLayout" name="mainLayout" stretch="1,4">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
     <item>
      <widget class="QFrame" name="sideBar">
-      <property name="minimumWidth">
-       <number>180</number>
-      </property>
-      <property name="maximumWidth">
-       <number>220</number>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
       <property name="styleSheet">
        <string>background-color:#23272e;</string>
       </property>
-      <layout class="QVBoxLayout" name="sideBarLayout">
+      <property name="frameShape">
+       <enum>QFrame::Shape::StyledPanel</enum>
+      </property>
+      <layout class="QVBoxLayout" name="sideBarLayout" stretch="1,1,1,1,5">
        <item>
         <widget class="QLabel" name="logoLabel">
+         <property name="styleSheet">
+          <string>font-size:22px;font-weight:bold;color:#2a82da;margin:20px 0 20px 0;</string>
+         </property>
          <property name="text">
           <string>LOGO</string>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="styleSheet">
-          <string>font-size:22px;font-weight:bold;color:#2a82da;margin:20px 0 20px 0;</string>
+          <set>Qt::AlignmentFlag::AlignCenter</set>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="btnHome">
-         <property name="text">
-          <string>Home</string>
-         </property>
          <property name="styleSheet">
           <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+         <property name="text">
+          <string>Home</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="btnSettings">
-         <property name="text">
-          <string>Settings</string>
-         </property>
          <property name="styleSheet">
           <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+         <property name="text">
+          <string>Settings</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QPushButton" name="btnAbout">
-         <property name="text">
-          <string>About</string>
-         </property>
          <property name="styleSheet">
           <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+         <property name="text">
+          <string>About</string>
          </property>
         </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
-          <enum>Qt::Vertical</enum>
+          <enum>Qt::Orientation::Vertical</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -91,34 +97,31 @@
     </item>
     <item>
      <widget class="QStackedWidget" name="mainStack">
-      <property name="minimumWidth">
-       <number>600</number>
-      </property>
       <widget class="QWidget" name="pageHome">
        <layout class="QVBoxLayout" name="verticalLayoutHome">
         <item>
          <widget class="QLabel" name="labelWelcome">
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
           <property name="text">
            <string>Welcome to the Dashboard</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
         <item>
          <widget class="QLabel" name="labelDesc">
+          <property name="styleSheet">
+           <string>font-size:16px;color:#888;</string>
+          </property>
           <property name="text">
            <string>This is the main page of the application. You can switch features on the left.</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string>font-size:16px;color:#888;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -128,14 +131,14 @@
        <layout class="QVBoxLayout" name="verticalLayoutSettings">
         <item>
          <widget class="QLabel" name="labelSettings">
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
           <property name="text">
            <string>Settings</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
@@ -145,14 +148,14 @@
        <layout class="QVBoxLayout" name="verticalLayoutAbout">
         <item>
          <widget class="QLabel" name="labelAbout">
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
           <property name="text">
            <string>About</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="styleSheet">
-           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+           <set>Qt::AlignmentFlag::AlignCenter</set>
           </property>
          </widget>
         </item>
