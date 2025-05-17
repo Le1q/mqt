@@ -6,57 +6,161 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>851</width>
-    <height>511</height>
+    <width>1000</width>
+    <height>700</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Qt Split Libs Demo</string>
+   <string>Dashboard</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>80</y>
-      <width>93</width>
-      <height>28</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="listView">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>210</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QComboBox" name="comboBox">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>160</y>
-      <width>83</width>
-      <height>25</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QTimeEdit" name="timeEdit">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>220</y>
-      <width>118</width>
-      <height>25</height>
-     </rect>
-    </property>
-   </widget>
+   <layout class="QHBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QFrame" name="sideBar">
+      <property name="minimumWidth">
+       <number>180</number>
+      </property>
+      <property name="maximumWidth">
+       <number>220</number>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="styleSheet">
+       <string>background-color:#23272e;</string>
+      </property>
+      <layout class="QVBoxLayout" name="sideBarLayout">
+       <item>
+        <widget class="QLabel" name="logoLabel">
+         <property name="text">
+          <string>LOGO</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="styleSheet">
+          <string>font-size:22px;font-weight:bold;color:#2a82da;margin:20px 0 20px 0;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnHome">
+         <property name="text">
+          <string>Home</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSettings">
+         <property name="text">
+          <string>Settings</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnAbout">
+         <property name="text">
+          <string>About</string>
+         </property>
+         <property name="styleSheet">
+          <string>font-size:16px;padding:10px;color:white;background:transparent;text-align:left;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="mainStack">
+      <property name="minimumWidth">
+       <number>600</number>
+      </property>
+      <widget class="QWidget" name="pageHome">
+       <layout class="QVBoxLayout" name="verticalLayoutHome">
+        <item>
+         <widget class="QLabel" name="labelWelcome">
+          <property name="text">
+           <string>Welcome to the Dashboard</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelDesc">
+          <property name="text">
+           <string>This is the main page of the application. You can switch features on the left.</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string>font-size:16px;color:#888;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageSettings">
+       <layout class="QVBoxLayout" name="verticalLayoutSettings">
+        <item>
+         <widget class="QLabel" name="labelSettings">
+          <property name="text">
+           <string>Settings</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="pageAbout">
+       <layout class="QVBoxLayout" name="verticalLayoutAbout">
+        <item>
+         <widget class="QLabel" name="labelAbout">
+          <property name="text">
+           <string>About</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="styleSheet">
+           <string>font-size:28px;font-weight:bold;color:#2a82da;</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>
