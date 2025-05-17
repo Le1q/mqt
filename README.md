@@ -1,2 +1,2 @@
-# ddQtExample
+# mqt
 Qt's cmake template case
