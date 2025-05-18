@@ -95,8 +95,7 @@
       </layout>
      </widget>
     </item>
-    <item>
-     <widget class="QStackedWidget" name="mainStack">
+    <item>     <widget class="QStackedWidget" name="mainStack">
       <widget class="QWidget" name="pageHome">
        <layout class="QVBoxLayout" name="verticalLayoutHome">
         <item>
@@ -109,6 +108,47 @@
           </property>
           <property name="alignment">
            <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="buttonLayout">
+          <item>
+           <widget class="QPushButton" name="openImageButton">
+            <property name="text">
+             <string>Open Image</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="processImageButton">
+            <property name="text">
+             <string>Count Pills</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="imageLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="resultLabel">
+          <property name="text">
+           <string>Results will be shown here</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>

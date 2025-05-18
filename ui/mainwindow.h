@@ -17,8 +17,11 @@ private slots:
     void onHomeButtonClicked();
     void onSettingsButtonClicked();
     void onAboutButtonClicked();
+    void onOpenImageButtonClicked();
+    void onProcessImageButtonClicked();
 
 private:
     Ui::MainWindow *ui;
     MyPublisher publisherM;
+    QString currentImagePath;  // 存储当前打开的图片路径
 };
