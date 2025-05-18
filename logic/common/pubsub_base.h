@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <vector>
 
-// 订阅者基类
+// Subscriber base class
 class Subscriber
 {
 public:
@@ -10,7 +10,7 @@ public:
     virtual void onNotify(int eventId, void* data) = 0;
 };
 
-// 发布者基类
+// Publisher base class
 class Publisher
 {
 public:

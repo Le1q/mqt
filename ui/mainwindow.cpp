@@ -9,9 +9,14 @@ MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent), ui(new Ui::MainWi
 {
     ui->setupUi(this);
     publisherM.subscribe(this);
-    // 触发一次发布演示
-    publisherM.doSomething();
-    connect(ui->pushButton, &QPushButton::clicked, this, &MainWindow::on_pushButton_clicked);
+
+    // Connect button signals to slots
+    connect(ui->btnHome, &QPushButton::clicked, this, &MainWindow::onHomeButtonClicked);
+    connect(ui->btnSettings, &QPushButton::clicked, this, &MainWindow::onSettingsButtonClicked);
+    connect(ui->btnAbout, &QPushButton::clicked, this, &MainWindow::onAboutButtonClicked);
+
+    // Set home page as default
+    ui->mainStack->setCurrentIndex(0);
 }
 
 MainWindow::~MainWindow()
@@ -23,12 +28,21 @@ MainWindow::~MainWindow()
 void MainWindow::onNotify(int eventId, void* data)
 {
     QString msg = QString::fromStdString(data ? *(static_cast<std::string*>(data)) : "");
-    QMessageBox::information(this, "事件通知",
-                             QString("事件ID: %1\n内容: %2").arg(eventId).arg(msg));
+    QMessageBox::information(this, "Event Notification",
+                             QString("Event ID: %1\nContent: %2").arg(eventId).arg(msg));
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::onHomeButtonClicked()
 {
-    // TODO: 实现按钮点击后的逻辑
-    publisherM.doSomething();
+    ui->mainStack->setCurrentIndex(0);
+}
+
+void MainWindow::onSettingsButtonClicked()
+{
+    ui->mainStack->setCurrentIndex(1);
+}
+
+void MainWindow::onAboutButtonClicked()
+{
+    ui->mainStack->setCurrentIndex(2);
 }
