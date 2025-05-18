@@ -3,6 +3,7 @@
 
 #include "logic.h"
 #include "logic/code/pubsub_demo.h"
+#include "logic/version_manager.h"
 #include "mainwindow.h"
 
 int main(int argc, char *argv[])
@@ -30,7 +31,13 @@ int main(int argc, char *argv[])
     Logic logic;
     int result = logic.add(2, 3);  // Example usage
     MainWindow w;
-    w.setWindowTitle(QString("Peace & Love").arg(result));
+      // 使用版本管理器设置窗口标题
+    auto& versionManager = VersionManager::getInstance();
+    QString windowTitle = QString("%1 v%2 - Build: %3")
+        .arg(QString::fromStdString(versionManager.getAppName()))
+        .arg(QString::fromStdString(versionManager.getVersion()))
+        .arg(QString::fromStdString(versionManager.getBuildTime()));
+    w.setWindowTitle(windowTitle);
     w.show();
 
     return a.exec();
