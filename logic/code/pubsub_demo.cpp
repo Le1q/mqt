@@ -6,7 +6,7 @@
 void MySubscriber::onNotify(int eventId, void* data)
 {
     std::string* msg = static_cast<std::string*>(data);
-    std::cout << "[MySubscriber] 收到事件 " << eventId << ": " << (msg ? *msg : "<null>")
+    std::cout << "[MySubscriber] Received event " << eventId << ": " << (msg ? *msg : "<null>")
               << std::endl;
 }
 
